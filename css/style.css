@@ -4,28 +4,84 @@ font-family: 'Lora', serif;
 font-family: 'Ubuntu', sans-serif;
 */
 
+:root {
+	--dark-color: #143774;
+	--accent-color: #1792d2;
+	--main-color: #707070;
+	--light-color: #f8f8f8;
+	--grey-color: #ebebeb;
+}
+
 body {
 	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.125rem;
+	font-weight: 300;
+	color: var(--main-color);
 }
 
 /* =================
 Typography
 ================= */
 
-h1 {
+h1,
+h2,
+h3 {
 	font-family: 'Lora', serif;
 	font-weight: 400;
-	color: #143774;
+	color: var(--dark-color);
+}
+
+h1 {
 	font-size: 2rem;
 	margin: 0;
 }
 
+h2 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+a {
+	color: var(--accent-color);
+}
+
+a:hover,
+a:focus {
+	color: var(--dark-color);
+}
+
+strong {
+	font-weight: 700;
+}
+
+/* the logo subtitle*/
 .subtitle {
 	font-weight: 700;
-	color: #1792d2;
+	color: var(--accent-color);
 	font-size: 0.75rem;
 	margin: 0;
+}
+
+.article-title {
+	font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+	font-size: 0.875rem;
+}
+
+.article-read-more {
+	/*	color: var(--accent-color);*/
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+	/*color: var(--dark-color);*/
+	text-decoration: underline;
 }
 
 /* =================
@@ -44,7 +100,7 @@ Layout
 }
 
 header {
-	background: #f8f8f8;
+	background: var(--light-color);
 	padding: 2em 0;
 }
 
@@ -73,23 +129,23 @@ nav li {
 
 nav a {
 	text-decoration: none;
-	color: #707070;
+	color: var(--main-color);
 	font-weight: 700;
 	padding: 0.25em 0;
 }
 
 nav a:hover,
 nav a:focus {
-	color: #1792d2;
+	color: var(--accent-color);
 }
 
 .current-page {
-	border-bottom: 1px solid #707070;
+	border-bottom: 1px solid var(--main-color);
 	cursor: default;
 }
 
 .current-page:hover {
-	color: #707070;
+	color: var(--main-color);
 }
 
 @media (max-width: 675px) {
