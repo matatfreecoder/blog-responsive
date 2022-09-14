@@ -108,6 +108,7 @@ strong {
 .widget-recent-post-title,
 .widget-title {
 	font-size: 1rem;
+	margin-bottom: 1em;
 }
 .widget-recent-post-title {
 	margin-top: 0.5em;
