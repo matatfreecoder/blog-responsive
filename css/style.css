@@ -25,6 +25,13 @@ img {
 	display: block;
 }
 
+.image-full {
+	max-height: 300px;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+	margin-bottom: 2em;
+}
 /* =================
 Typography
 ================= */
@@ -67,6 +74,8 @@ strong {
 	color: var(--accent-color);
 	font-size: 0.75rem;
 	margin: 0;
+	letter-spacing: 0.125em;
+	text-transform: uppercase;
 }
 
 .article-title {
@@ -102,10 +111,13 @@ strong {
 	font-weight: 700;
 }
 
-/*
-@media(min-width:675px){
+.title-about-me {
+	color: var(--accent-color);
+}
 
-}*/
+.main-about-me {
+	margin-bottom: 3em;
+}
 
 /* =================
 Layout
