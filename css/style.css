@@ -18,6 +18,7 @@ body {
 	font-size: 1.125rem;
 	font-weight: 300;
 	color: var(--main-color);
+	line-height: 1.75;
 }
 
 img {
@@ -43,6 +44,7 @@ h3 {
 	font-weight: 400;
 	color: var(--dark-color);
 	margin-bottom: 0;
+	line-height: normal;
 }
 
 h1 {
@@ -90,6 +92,8 @@ strong {
 .article-read-more {
 	font-weight: 700;
 	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 .article-read-more:hover,
@@ -105,10 +109,16 @@ strong {
 .widget-title {
 	font-size: 1rem;
 }
+.widget-recent-post-title {
+	margin-top: 0.5em;
+	margin-bottom: 2em;
+}
 
 .widget-title {
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 .title-about-me {
@@ -190,6 +200,8 @@ nav a {
 	color: var(--main-color);
 	font-weight: 700;
 	padding: 0.25em 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 nav a:hover,
@@ -293,7 +305,7 @@ nav a:focus {
 	display: flex;
 	flex-direction: column;
 	border-bottom: 2px solid var(--grey-color);
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 }
 
 .widget-recent-post:last-child {
@@ -306,5 +318,4 @@ nav a:focus {
 	object-fit: cover;
 	width: 100%;
 	min-height: 100px;
-	margin-top: 1em;
 }
