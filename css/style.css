@@ -92,6 +92,21 @@ strong {
 	margin: 1em 0;
 }
 
+.widget-recent-post-title,
+.widget-title {
+	font-size: 1rem;
+}
+
+.widget-title {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+}
+
+/*
+@media(min-width:675px){
+
+}*/
+
 /* =================
 Layout
 ================= */
@@ -115,16 +130,33 @@ header {
 	margin-bottom: 2em;
 }
 
+footer {
+	background: var(--dark-color);
+	text-align: center;
+	padding: 2em;
+	font-size: 0.815rem;
+}
+
+footer a {
+	color: var(--main-color);
+}
+
+footer a:hover {
+	color: var(--grey-color);
+}
+
 @media (min-width: 675px) {
 	.container-flex {
 		flex-direction: row;
 	}
 
 	main {
-		width: 75%;
+		width: 70%;
 	}
 	aside {
-		width: 20%;
+		width: 25%;
+		min-width: 200px;
+		margin-left: 1em;
 	}
 }
 
@@ -175,7 +207,7 @@ nav a:focus {
 /* Article */
 
 .article-featured {
-	border-bottom: 1px solid var(--grey-color);
+	border-bottom: 2px solid var(--grey-color);
 	padding-bottom: 2em;
 	margin-bottom: 2em;
 }
@@ -236,4 +268,31 @@ nav a:focus {
 	.article-info {
 		order: -1;
 	}
+}
+
+/*widgets*/
+.sidebar-widget {
+	border: 20px solid var(--grey-color);
+	padding: 1.125em;
+	margin-bottom: 2.5em;
+}
+
+.widget-recent-post {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 2px solid var(--grey-color);
+	margin-bottom: 1em;
+}
+
+.widget-recent-post:last-child {
+	border: 0;
+	margin: 0;
+}
+
+.widget-image {
+	order: -1;
+	object-fit: cover;
+	width: 100%;
+	min-height: 100px;
+	margin-top: 1em;
 }
