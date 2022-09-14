@@ -20,6 +20,11 @@ body {
 	color: var(--main-color);
 }
 
+img {
+	max-width: 100%;
+	display: block;
+}
+
 /* =================
 Typography
 ================= */
@@ -30,6 +35,7 @@ h3 {
 	font-family: 'Lora', serif;
 	font-weight: 400;
 	color: var(--dark-color);
+	margin-bottom: 0;
 }
 
 h1 {
@@ -73,15 +79,17 @@ strong {
 }
 
 .article-read-more {
-	/*	color: var(--accent-color);*/
 	font-weight: 700;
 	text-decoration: none;
 }
 
 .article-read-more:hover,
 .article-read-more:focus {
-	/*color: var(--dark-color);*/
 	text-decoration: underline;
+}
+
+.article-info {
+	margin: 1em 0;
 }
 
 /* =================
@@ -94,23 +102,29 @@ Layout
 	margin: 0 auto;
 }
 
-.container-nav {
+.container-flex {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 }
 
 header {
 	background: var(--light-color);
-	padding: 2em 0;
+	padding: 3em 0;
+	text-align: center;
+	margin-bottom: 2em;
 }
 
-@media (max-width: 675px) {
-	.container-nav {
-		flex-direction: column;
+@media (min-width: 675px) {
+	.container-flex {
+		flex-direction: row;
 	}
 
-	header {
-		text-align: center;
+	main {
+		width: 75%;
+	}
+	aside {
+		width: 20%;
 	}
 }
 
@@ -155,5 +169,71 @@ nav a:focus {
 
 	nav li {
 		margin: 0.5em 0;
+	}
+}
+
+/* Article */
+
+.article-featured {
+	border-bottom: 1px solid var(--grey-color);
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+}
+
+.article-recent {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2em;
+}
+
+.article-recent-main {
+	order: 2;
+}
+
+.article-recent-secondary {
+	order: 1;
+}
+
+@media (max-width: 600px) {
+	.article-title {
+		margin-top: -0.8em;
+	}
+	.article-info {
+		text-align: right;
+		font-size: 0.65em;
+	}
+}
+
+@media (min-width: 675px) {
+	.article-recent {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.article-recent-main {
+		width: 69%;
+	}
+	.article-recent-secondary {
+		width: 28%;
+	}
+
+	.article-recent-secondary img {
+		width: 100%;
+		min-height: 250px;
+		object-fit: cover;
+		object-position: left;
+	}
+
+	.article-featured {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.article-image {
+		order: -2;
+	}
+
+	.article-info {
+		order: -1;
 	}
 }
